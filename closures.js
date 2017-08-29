@@ -38,13 +38,17 @@ function outer() {
     function dial(number) {
       return 'Calling ' + name + ' at ' + number
     }
-    return dial
+    return dial;
   }
   
   /****** INSTRUCTIONS PROBLEM 2 ******/
   /* Above you're given a callFriend function that returns the dial function.
-  Create a callJake function that when invoked with '435-555-9248' returns 'Calling Jake at 435-555-9248'
-  in your console. */
+  
+  Store the result of invoking callFriend in a variable named callJake.
+  
+  When callJake is invoked with '435-555-9248', it returns 'Calling Jake at 435-555-9248' 
+  (HINT: You will need to pass in arguments to both function invocations)
+  */
   
     //Code Here
   
@@ -89,10 +93,10 @@ function outer() {
   /****** INSTRUCTIONS PROBLEM 4 ******/
   /* Inside the function called counterFactory return two functions that implement
   up/down counter. The first function is called inc, this function is responsible
-  for incrementing the value once. The second function is called dec, this
-  function is responsible for decrementing the value by one. You will need to use
-  the module pattern to achieve this. 
-  Information on the module pattern available here: 
+  for incrementing the value once and returning the updated value. The second function 
+  is called dec, this function is responsible for decrementing the value by one 
+  and returning the updated value. You will need to use the module pattern to 
+  achieve this. Information on the module pattern available here: 
   http://stackoverflow.com/questions/17776940/javascript-module-pattern-with-example?answertab=votes#tab-top
   */
   
@@ -102,6 +106,7 @@ function outer() {
   
   
     return {
+
     }
   }
   
@@ -161,7 +166,7 @@ function outer() {
   
   /****** INSTRUCTIONS PROBLEM 6 ******/
   /* Inside the module's return object create a publicMethod function that
-  invokes privateMethod. Invoke this by calling module.publicMethod(); outside
+  invokes privateMethod (return the result). Invoke this by calling module.publicMethod(); outside
   the module scope */
   
   var module = (function() {
