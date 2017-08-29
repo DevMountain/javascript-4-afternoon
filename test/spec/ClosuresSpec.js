@@ -118,32 +118,27 @@ describe('closures', function () {
 		})
 	})
 
-	describe('findPotentialFriends', function() {
+	describe('secretNumber', function() {
 		it('should exist', function() {
-			expect(findPotentialFriends).toEqual(jasmine.any(Function));
+			expect(secretNumber).toEqual(jasmine.any(Function));
 		})
 
-		it('should return a function', function() {
-			expect(findPotentialFriends([])).toEqual(jasmine.any(Function));
+		it('should return an object with two properties', function() {
+			expect(secretNumber()).toEqual(jasmine.any(Object));
+			expect(secretNumber().addToSecret).toEqual(jasmine.any(Function));
+			expect(secretNumber().takeAwayFromSecret).toEqual(jasmine.any(Function));
 		})
 
-		it('should return false if a given user is already a friend', function() {
-			expect(findPotentialFriends(["Tom"])("Tom")).toEqual(false)
+		it('should add to secret number when addToSecret is invoked with argument', function() {
+			let obj = secretNumber();
+			expect(obj.addToSecret(5)).toEqual(148)
+			expect(obj.addToSecret(10)).toEqual(158)
 		})
 
-		it('should return true if a given user is not a friend', function() {
-			expect(findPotentialFriends(["Tom"])("Tim")).toEqual(true);
-		})
-
-		describe('Black Diamond', function() {
-			it('should create an array of potential second level friends', function() {
-				expect(potentialSecondLevelFriends).toEqual(jasmine.any(Array));
-				expect(potentialSecondLevelFriends).toEqual(['Anne', 'Quinton'])
-			})
-			it('should create an array of potential friends from all users', function() {
-				expect(allPotentialFriends).toEqual(jasmine.any(Array));
-				expect(allPotentialFriends).toEqual(['Anne', 'Quinton', 'Katie', 'Mary'])
-			})
+		it('should minus from secret number when takeAwayFromSecret is invoked with argument', function() {
+			let obj = secretNumber();
+			expect(obj.takeAwayFromSecret(10)).toEqual(133)
+			expect(obj.takeAwayFromSecret(3)).toEqual(130)
 		})
 	})
 

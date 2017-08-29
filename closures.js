@@ -127,7 +127,10 @@ function outer() {
   
   /****** INSTRUCTIONS PROBLEM 5 ******/
   /* Inside the motivation function create another function called message that
-  will return 'You're doing awesome, keep it up firstname lastname.' */
+  will return the welcome text with the firstname and lastname. The final message should
+  say "You're doing awesome, keep it up firstname lastname." 
+  (Hint: don't forget to have a space between the firstname and lastname and a period
+  at the end of the sentence.)  */
   
   function motivation(firstname, lastname) {
   
@@ -185,33 +188,19 @@ function outer() {
   /******************************************************************************\
    #PROBLEM-07
    \******************************************************************************/
+
   /****** INSTRUCTIONS PROBLEM 7 ******/
-  /* Here we are given three arrays: an array of friends, an array of second-level
-  friends (friends of friends), and an array of all users. These arrays may share
-  users. Write a function that takes in our existing friends and returns
-  a function that will tell us if a given user is not already a friend. */
-  var friends = ["Tom", "Dick", "Harry"];
-  var secondLevelFriends = ["Anne", "Harry", "Quinton"];
-  var allUsers = ["Tom", "Dick", "Harry", "Anne", "Quinton", "Katie", "Mary"];
-  
-  function findPotentialFriends(existingFriends) {
-  
+  /* Here we have a function named secretNumber that has a secret number. Inside
+  the return object, create two methods called addToSecret and takeAwayFromSecret. addToSecret should have a parameter that is added to the secret number returning the updated secret number. takeAwayFromSecret should have a parameter that takes away from the secret number returning the updated secret number. */
+
+  function secretNumber() {
+    var secret = 143;
+
+    return {
+      // Code here
+    }
   }
   
-  var isNotAFriend = findPotentialFriends( friends );
-  // isNotAFriend(allUsers[0]); // false
-  // isNotAFriend(secondLevelFriends[2]); // true
-  
-  
-  /******************************************************************************\
-   #PROBLEM-07 -- BLACK DIAMOND
-   \******************************************************************************/
-  /* Using your findPotentialFriends function from above and the Array.filter
-  method, find all potential second level friends as well as potential friends
-  from allUsers. */
-  
-  var potentialSecondLevelFriends = "?";
-  var allPotentialFriends = "?";
   
   
   /******************************************************************************\
