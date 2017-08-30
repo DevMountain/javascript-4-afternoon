@@ -203,6 +203,12 @@ function outer() {
 
     return {
       // Code here
+      addToSecret: function (num) {
+        return secret += num;
+      },
+      takeAwayFromSecret: function(num) {
+        return secret -= num;
+      }
     }
   }
   
