@@ -102,7 +102,7 @@ describe('User', function () {
             expect(u.addSavedPost).toBeDefined()
         })
         it('should be a prototype method', function() {
-            expect(Object.getPrototypeOf(u.addSavedPost).toEqual(jasmine.any(Function));
+            expect(Object.getPrototypeOf(u.addSavedPost).toEqual(jasmine.any(Function)));
         })
         it('should save a new object to the savedPosts array', function() {
             u.addSavedPost(2, 'Hard Core Quilting', 5)
@@ -115,7 +115,7 @@ describe('User', function () {
 describe('removeSavedPost', function() {
     var posts = [{id: 1, title: 'Log Cabin', rating: 4}]
     var u = new User('Harrietta', 54, 'quiltingQueen@sew.ing', posts)
-    u.removeSavedPost(2, 'Hard Core Quilting', 5)
+    u.addSavedPost(2, 'Hard Core Quilting', 5)
     it('should exist', function() {
         expect(u.removeSavedPost).toBeDefined()
     })
@@ -126,6 +126,24 @@ describe('removeSavedPost', function() {
         u.removeSavedPost(2)
         expect(u.savedPosts.length).toBe(1)
         expect(u.savedPosts.filter(e => e.id === 2).length).toBe(0)
+    })
+})
+// problem 7
+describe('changePostRating', function() {
+    var posts = [{id: 1, title: 'Log Cabin', rating: 4}]
+    var u = new User('Harrietta', 54, 'quiltingQueen@sew.ing', posts)
+    u.addSavedPost(2, 'Hard Core Quilting', 5)
+    it('should exist', function() {
+        expect(u.changePostRating).toBeDefined()
+    })
+    it('should be a prototype method', function() {
+        expect(Object.getPrototypeOf(u.changePostRating)).toEqual(jasmine.any(Function));
+    })
+    it('should update the rating for object from the savedPosts array', function() {
+        u.changePostRating(2, 3)
+        u.changePostRating(1, 5)
+        expect(u.savedPosts.filter(e => e.id === 2)[0].rating).toBe(3)
+        expect(u.savedPosts.filter(e => e.id === 1)[0].rating).toBe(5)        
     })
 })
 

@@ -112,7 +112,7 @@ function Movie(name, genre, rating) {
 
 
 // =======================
-// Problem 6
+// Problem 7
 // ======================= 
 
 
