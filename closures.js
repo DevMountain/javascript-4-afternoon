@@ -144,12 +144,12 @@ function outer() {
     // code message function here.
   
   
-    //Uncommment this to return the value of your invoked message function
-    //return message();
+    //Uncommment this to return the value of your message function
+    //return message;
   
   }
   
-  motivation('Billy', 'Bob'); // 'You're doing awesome keep it up Billy Bob.
+  var greeting = motivation('Billy', 'Bob'); // 'You're doing awesome keep it up Billy Bob.
   
   
   
@@ -203,12 +203,6 @@ function outer() {
 
     return {
       // Code here
-      addToSecret: function (num) {
-        return secret += num;
-      },
-      takeAwayFromSecret: function(num) {
-        return secret -= num;
-      }
     }
   }
   
