@@ -56,6 +56,25 @@ function Employee(name, email, hireDate) {
   
   prius.moveCar(); //increments prius' move property by 10. Returns the new move property.
   mustang.moveCar(); //increments mustang' move property by 10. Returns the new move property.
+
+
+
+
+// =======================
+// Problem 4
+// =======================  
+
+
+
+
+
+
+
+// =======================
+// Problem 5
+// =======================  
+
+
   
   
   
