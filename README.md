@@ -16,7 +16,7 @@ Complete all of the activities inside of `closures.js` and `constructors.js`. Us
 
 ## Tips and Tricks
 
-One of the biggest tools at the developer's disposal is the browser's built-in debugger. To use it, open `./index.html` with your browser. Another great tool for small and isolated pieces of code is <a href="http://www.pythontutor.com/visualize.html#">Pyton Tutor</a>. Just make sure to change the code to `JavaScript ES6`.
+One of the biggest tools at the developer's disposal is the browser's built-in debugger. To use it, open `./index.html` with your browser. Another great tool for small and isolated pieces of code is <a href="http://www.pythontutor.com/visualize.html#">Python Tutor</a>. Just make sure to change the code to `JavaScript ES6`.
 
 ## Contributions
 
